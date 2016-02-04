@@ -6,7 +6,20 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+
+		"barryvdh/laravel-dompdf": "0.6.*",
+		"aws/aws-sdk-php-laravel": "2.*",
+		"vinelab/neoeloquent": "1.2.*",
+		"fideloper/proxy": "3.*",
+		"maknz/slack":"1.*",
+		"roumen/sitemap": "2.5.*",
+		"pagarme/pagarme-php": "dev-master",
+		"vinkla/pusher": "1.*",
+		"predis/predis": "~1.0",
+		"guzzlehttp/guzzle": "~4.0",
+		"google/recaptcha": "~1.1",
+		"bugsnag/bugsnag-laravel": "1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
