@@ -1,10 +1,58 @@
 {
-  "private": true,
-  "devDependencies": {
-    "gulp": "^3.8.8"
-  },
-  "dependencies": {
-    "laravel-elixir": "^4.0.0",
-    "bootstrap-sass": "^3.0.0"
-  }
+    "private": true,
+    "devDependencies": {
+        "gulp": "3.9.0",
+        "babel-runtime": "5.8.34",
+        "browser-sync": "2.10.0",
+        "browserify": "12.0.1",
+        "browserify-shim": "3.8.11",
+        "gulp-babel": "6.1.1",
+        "gulp-filter": "3.0.1",
+        "gulp-flatten": "0.2.0",
+        "gulp-notify": "2.2.0",
+        "laravel-elixir": "4.0.4",
+        "main-bower-files": "2.9.0",
+        "node-notifier": "4.3.1",
+        "watchify": "3.6.1"
+    },
+    "dependencies": {
+        "laravel-elixir": "^4.0.0",
+        "bootstrap-sass": "^3.0.0"
+    },
+    "browser": {
+        "jquery": "./bower_components/jquery/dist/jquery.js",
+        "select2": "./bower_components/select2/select2.js",
+        "select2-pt-br": "./bower_components/select2/select2_locale_pt-BR.js",
+        "jquery.inputmask": "./bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js",
+        "jquery-validation": "./bower_components/jquery-validation/dist/jquery.validate.js",
+        "datatables": "./bower_components/datatables/media/js/jquery.dataTables.js"
+    },
+    "browserify-shim": {
+        "jquery": "$",
+        "jquery.inputmask": {
+            "depends": [
+                "jquery:$"
+            ]
+        },
+        "jquery-validation": {
+            "depends": [
+                "jquery:$"
+            ]
+        },
+        "datatables": {
+            "depends": [
+                "jquery:$"
+            ]
+        },
+        "select2": {
+            "depends": [
+                "jquery.mousewheel"
+            ]
+        }
+    },
+    "browserify": {
+        "transform": [
+            "browserify-shim"
+        ]
+    }
 }
